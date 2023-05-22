@@ -2,7 +2,6 @@ version: '3'
 services:
   database:
     image: mysql:8.0.31
-    privileged: true
     restart: always
     ports:
       - 3307:3306
