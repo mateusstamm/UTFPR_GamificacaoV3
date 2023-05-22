@@ -14,7 +14,7 @@ namespace API.Data
         public DbSet<AtendimentoProdutoModel>? AtendimentoProduto { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var serverVersion = new MySqlServerVersion(new Version(5, 7, 16)); // Especifique a versão correta do servidor MySQL aqui
+            var serverVersion = new MySqlServerVersion(new Version(8, 0, 31)); // Especifique a versão correta do servidor MySQL aqui
 
             optionsBuilder.UseMySql("Server=database;Port=3306;Database=restaurante;User=root;Password=restaurante;", serverVersion);
         }

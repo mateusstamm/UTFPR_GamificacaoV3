@@ -1,11 +1,11 @@
 version: '3'
 services:
   database:
-    image: mysql:5.7.16
+    image: mysql:8.0.31
     privileged: true
     restart: always
     ports:
-      - 3306:3306
+      - 3307:3306
     environment:
       - MYSQL_ROOT_PASSWORD=restaurante
       - MYSQL_DATABASE=restaurante
