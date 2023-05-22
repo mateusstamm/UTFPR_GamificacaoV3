@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .table-hover-custom tbody tr:hover {
+                background-color: #b6b6b6;
+                
+            }
+            body{
+                padding: 3% 3% 3% 3%;
+                background-color: #e2e2e2;
+
+            }
+            main{
+               padding: 3% 3% 3% 3%;
+            }
+            footer{
+                margin-top: 5%;
+                background-color: #e2e2e2;
+                text-align: center;
+                pading
+            }
+            
+
+        </style>
+        <title>Gerencia do Restaurante</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
+        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <partial name="./_MainMenuPartialPage.cshtml">
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer class="bg-primary text-white py-3">
+            <H8>UTFPR 2023</H8>
+        </footer>
+    </body>
+</html>
