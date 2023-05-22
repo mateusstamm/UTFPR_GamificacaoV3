@@ -17,7 +17,7 @@ namespace GerenRest.RazorPages.Pages.Categoria
             
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Categoria";
+                string url = "http://webapi:80/Categoria";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);

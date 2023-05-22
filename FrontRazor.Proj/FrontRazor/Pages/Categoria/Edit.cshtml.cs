@@ -24,7 +24,7 @@ namespace GerenRest.RazorPages.Pages.Categoria
 
             using (var httpClient = new HttpClient())
             {
-                string url = $"http://localhost:5239/Categoria/{id}";
+                string url = $"http://webapi:80/Categoria/{id}";
 
                 var response = await httpClient.GetAsync(url);
 
@@ -55,7 +55,7 @@ namespace GerenRest.RazorPages.Pages.Categoria
 
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = $"http://localhost:5239/Categoria/{id}";
+                string apiUrl = $"http://webapi:80/Categoria/{id}";
 
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

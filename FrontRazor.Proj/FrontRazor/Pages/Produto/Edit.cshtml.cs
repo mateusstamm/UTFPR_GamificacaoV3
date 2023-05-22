@@ -21,7 +21,7 @@ namespace GerenRest.RazorPages.Pages.Produto
         {
             using (var httpClient = new HttpClient())
             {
-                string url = $"http://localhost:5239/Produto/{id}";
+                string url = $"http://webapi:80/Produto/{id}";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);
@@ -32,7 +32,7 @@ namespace GerenRest.RazorPages.Pages.Produto
 
             using (var httpClient = new HttpClient())
             {
-                string url = $"http://localhost:5239/Categoria";
+                string url = $"http://webapi:80/Categoria";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);
@@ -55,7 +55,7 @@ namespace GerenRest.RazorPages.Pages.Produto
 
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = $"http://localhost:5239/Produto/{id}";
+                string apiUrl = $"http://webapi:80/Produto/{id}";
 
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

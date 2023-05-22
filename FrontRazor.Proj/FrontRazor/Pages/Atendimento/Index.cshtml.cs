@@ -16,7 +16,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
         {
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Atendimento";
+                string url = "http://webapi:80/Atendimento";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);

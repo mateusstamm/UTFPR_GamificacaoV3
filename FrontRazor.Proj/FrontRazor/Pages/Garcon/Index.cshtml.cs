@@ -16,7 +16,7 @@ namespace GerenRest.RazorPages.Pages.Garcon
         {
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Garcon";
+                string url = "http://webapi:80/Garcon";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);

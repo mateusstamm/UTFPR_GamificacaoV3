@@ -24,7 +24,7 @@ namespace GerenRest.RazorPages.Pages.Mesa
 
             using (var httpClient = new HttpClient())
             {
-                string url = $"http://localhost:5239/Mesa/{id}";
+                string url = $"http://webapi:80/Mesa/{id}";
                 var response = await httpClient.GetAsync(url);
                 if (!response.IsSuccessStatusCode)
                 {
@@ -44,7 +44,7 @@ namespace GerenRest.RazorPages.Pages.Mesa
 
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = $"http://localhost:5239/Mesa/{id}";
+                string apiUrl = $"http://webapi:80/Mesa/{id}";
 
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

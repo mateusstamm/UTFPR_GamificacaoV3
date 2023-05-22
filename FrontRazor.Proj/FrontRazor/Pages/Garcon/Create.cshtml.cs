@@ -27,7 +27,7 @@ namespace GerenRest.RazorPages.Pages.Garcon
 
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = "http://localhost:5239/Garcon";
+                string apiUrl = "http://webapi:80/Garcon";
 
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

@@ -46,7 +46,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
 
             using (var httpClient = new HttpClient())
             {
-                string url = $"http://localhost:5239/Mesa/{MesaId}";
+                string url = $"http://webapi:80/Mesa/{MesaId}";
                 var response = await httpClient.GetAsync(url);
                 
                 var content = await response.Content.ReadAsStringAsync();
@@ -83,7 +83,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
             {
                 foreach(var idProd in prodConsumidos)
                 {
-                    string url = $"http://localhost:5239/Produto/{idProd}";
+                    string url = $"http://webapi:80/Produto/{idProd}";
                     var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                     var response = await httpClient.SendAsync(requestMes);
                 
@@ -104,7 +104,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
 
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = "http://localhost:5239/Atendimento";
+                string apiUrl = "http://webapi:80/Atendimento";
 
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -127,7 +127,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
         public async Task<IActionResult> OnGetAsync() {
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Garcon";
+                string url = "http://webapi:80/Garcon";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);
@@ -143,7 +143,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
 
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Mesa";
+                string url = "http://webapi:80/Mesa";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);
@@ -171,7 +171,7 @@ namespace GerenRest.RazorPages.Pages.Atendimento
 
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Produto";
+                string url = "http://webapi:80/Produto";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);

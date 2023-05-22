@@ -17,7 +17,7 @@ namespace GerenRest.RazorPages.Pages.Produto
         {
             using (var httpClient = new HttpClient())
             {
-                string url = $"http://localhost:5239/Produto/{id}";
+                string url = $"http://webapi:80/Produto/{id}";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);

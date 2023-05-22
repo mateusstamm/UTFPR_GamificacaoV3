@@ -28,7 +28,7 @@ namespace GerenRest.RazorPages.Pages.Categoria
 
             using (HttpClient client = new HttpClient())
             {
-                string apiUrl = "http://localhost:5239/Categoria";
+                string apiUrl = "http://webapi:80/Categoria";
 
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

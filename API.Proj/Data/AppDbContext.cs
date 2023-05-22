@@ -1,5 +1,6 @@
 using API.Models;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace API.Data
 {
@@ -11,8 +12,12 @@ namespace API.Data
         public DbSet<ProdutoModel>? Produtos { get; set; }
         public DbSet<AtendimentoModel>? Atendimentos { get; set; }
         public DbSet<AtendimentoProdutoModel>? AtendimentoProduto { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("DataSource=gerenRest.db;Cache=Shared");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var serverVersion = new MySqlServerVersion(new Version(5, 7, 16)); // Especifique a versão correta do servidor MySQL aqui
+
+            optionsBuilder.UseMySql("Server=database;Port=3306;Database=restaurante;User=root;Password=restaurante;", serverVersion);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.Entity<ProdutoModel>().ToTable("Produtos").HasKey(l => l.ProdutoID);

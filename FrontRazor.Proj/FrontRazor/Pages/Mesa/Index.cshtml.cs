@@ -16,7 +16,7 @@ namespace GerenRest.RazorPages.Pages.Mesa
         {
             using (var httpClient = new HttpClient())
             {
-                string url = "http://localhost:5239/Mesa";
+                string url = "http://webapi:80/Mesa";
 
                 var requestMes = new HttpRequestMessage(HttpMethod.Get, url);
                 var response = await httpClient.SendAsync(requestMes);
