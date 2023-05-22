@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\GerenRest.RazorPages.props" />
-</Project>
