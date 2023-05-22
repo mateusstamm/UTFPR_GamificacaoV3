@@ -9,20 +9,23 @@ O objetivo deste projeto é desenvolver um sistema de gerenciamento de pedidos d
 
 # Requisitos para execução do projeto
 
-- Visual Studio ou outra IDE de sua preferência;
-- SQLite, para o gerenciamento de banco de dados.
+- Docker, para execução dos containers da aplicação;
+- Docker-Compose, para realizar o build dos projetos;
 
 # Como deixar em funcionamento
 
 - Clone o repositório ou faça o download do ZIP em um diretório;
-- Abra a solução GerenciadorRestaurante.sln no Visual Studio;
-- Execute a aplicação [RestAPI] utilizando o comando "dotnet watch run" ou "dotnet run" dentro do diretório "/GerenRest.API", para que haja comunicação com o banco;
-- Execute a aplicação [RazorPages] utilizando o comando "dotnet watch run" ou "dotnet run" dentro do diretório "/GerenRest.RazorPages" e acesse http://localhost:5238/ para visualizar a interface web do sistema;
+- Acesse a pasta raiz onde consta o arquivo docker-compose.yml;
+- Dê o comando "docker-compose up -d", para realizar o build dos projetos;
+- Acesse a aplicação pela URL "http://localhost:5238/"
+- Acesse a API através da URL "http://localhost:5239/"
+- Acesse o Swagger (habilitado para testes) através da URL "http://localhost:5239/swagger/index.html"
 
 # Tecnologias utilizadas
 
 - .NET Core 7.0.5
 - Entity Framework Core 7.0.5
+- MySQL 5.7.16
 - C# Razor Pages
 - HTML
 - CSS
