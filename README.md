@@ -16,7 +16,7 @@ O objetivo deste projeto é desenvolver um sistema de gerenciamento de pedidos d
 
 - Clone o repositório ou faça o download do ZIP em um diretório;
 - Acesse a pasta raiz onde consta o arquivo docker-compose.yml;
-- Dê o comando "docker-compose up -d", para realizar o build dos projetos;
+- Dê o comando "docker-compose up --build -d", para realizar o build dos projetos;
 - Acesse a aplicação pela URL "http://localhost:5238/"
 - Acesse a API através do endpoint "http://localhost:5239/"
 - Acesse o Swagger (habilitado para testes) através da URL "http://localhost:5239/swagger/index.html"
